@@ -94,7 +94,7 @@
     	lowAlerted = true;
 	highAlerted = false;
         normalAlerted = false;
-	low(volume[0];
+	low(volume[0]);
     }
     
 
