@@ -3,10 +3,13 @@
   import StepHome from './steps/Home.svelte';
   import StepSetup from './steps/Setup.svelte';
   import StepRun from './steps/Run.svelte';
-  import { lowBeep, highBeep } from './lib/sound';
+  import { lowBeep, highBeep, high, normal, low } from './lib/sound';
 
   Howler.autoUnlock = false;
 
+  let highAlerted = false;
+  let normalAlerted = false;
+  let lowAlerted = false;
   let isConnecting = false;
   let step = 'home';
   let heartRange = [40, 220];
@@ -71,16 +74,29 @@
     heartRate = heartRateMeasurement.heartRate;
     const [min, max] = heartRange;
 
-    if (heartRate > max) {
-      highBeep(volume[0]);
-      isTooHigh = true;
-    } else if (heartRate < min) {
-      lowBeep(volume[0]);
-      isTooLow = true;
-    } else {
-      isTooHigh = false;
-      isTooLow = false;
+
+    if(heartRate > 190 && highAlerted == false)
+    {
+	highAlerted = true;
+	normalAlerted = false;
+        lowAlerted = false;
+	high(volume[0]);
     }
+    else if(heartRate > 140 && normalAlterted == false)
+    {
+   	normalAlerted = true;
+        highAlerted = false;
+	lowAlerted = false;
+	normal(volume[0];
+    }
+    else if(lowAlerted == false)
+    {
+    	lowAlerted = true;
+	highAlerted = false;
+        normalAlerted = false;
+	low(volume[0];
+    }
+    
 
     setTimeout(() => {
       hearRateBeat = false;
