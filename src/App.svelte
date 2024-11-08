@@ -45,9 +45,9 @@
     heartRate = 0;
     isTooLow = false;
     isTooHigh = false;
-    let highAlerted = false;
-    let normalAlerted = false;
-    let lowAlerted = false;
+    highAlerted = false;
+    normalAlerted = false;
+    lowAlerted = false;
     step = 'run';
 
     try {
