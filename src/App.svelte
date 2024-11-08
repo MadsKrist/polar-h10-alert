@@ -76,7 +76,7 @@
     var heartRateMeasurement = heartRateSensor.parseHeartRate(event.target.value);
     heartRate = heartRateMeasurement.heartRate;
     const [min, max] = heartRange;
-    const xVol = 200;
+    const xVol = 1000;
 
     if(heartRate > 180 && highAlerted == false)
     {
