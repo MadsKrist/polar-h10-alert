@@ -84,7 +84,7 @@
 	    highAlerted = true;
 	    normalAlerted = false;
       lowAlerted = false;
-	    high(200);
+	    high(xVol);
     }
     else if(heartRate < 150 && heartRate > 130 && normalAlerted == false)
     {
@@ -92,7 +92,7 @@
    	  normalAlerted = true;
       highAlerted = false;
 	    lowAlerted = false;
-	    normal(200);
+	    normal(xVol);
     }
     else if(heartRate < 130 && lowAlerted == false)
     {
@@ -100,7 +100,7 @@
     	lowAlerted = true;
 	    highAlerted = false;
       normalAlerted = false;
-	    low(200);
+	    low(xVol);
     }
     
 
