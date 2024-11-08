@@ -75,7 +75,7 @@
     const [min, max] = heartRange;
 
 
-    if(heartRate > 190 && highAlerted == false)
+    if(heartRate > 110 && highAlerted == false)
     {
       console.log("alerted high");
 	    highAlerted = true;
@@ -91,7 +91,7 @@
 	    lowAlerted = false;
 	    normal(volume[0]);
     }
-    else if(lowAlerted == false)
+    else if(heartRate < 90 && lowAlerted == false)
     {
       console.log("alerted low");
     	lowAlerted = true;
