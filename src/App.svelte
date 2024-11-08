@@ -76,7 +76,7 @@
     var heartRateMeasurement = heartRateSensor.parseHeartRate(event.target.value);
     heartRate = heartRateMeasurement.heartRate;
     const [min, max] = heartRange;
-
+    const xVol = 200;
 
     if(heartRate > 180 && highAlerted == false)
     {
@@ -84,7 +84,7 @@
 	    highAlerted = true;
 	    normalAlerted = false;
       lowAlerted = false;
-	    high(volume[0]);
+	    high(200);
     }
     else if(heartRate < 150 && heartRate > 130 && normalAlerted == false)
     {
@@ -92,7 +92,7 @@
    	  normalAlerted = true;
       highAlerted = false;
 	    lowAlerted = false;
-	    normal(volume[0]);
+	    normal(200);
     }
     else if(heartRate < 130 && lowAlerted == false)
     {
@@ -100,7 +100,7 @@
     	lowAlerted = true;
 	    highAlerted = false;
       normalAlerted = false;
-	    low(volume[0]);
+	    low(200);
     }
     
 
