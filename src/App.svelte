@@ -83,7 +83,7 @@
       lowAlerted = false;
 	    high(volume[0]);
     }
-    else if(heartRate > 100 && normalAlterted == false)
+    else if(heartRate > 100 && normalAlerted == false)
     {
       console.log("alerted normal");
    	  normalAlerted = true;
