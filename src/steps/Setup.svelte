@@ -36,7 +36,7 @@
         margin: 10,
         range: {
           'min': 0,
-          'max': 200
+          'max': 1000
         }
     });
 
