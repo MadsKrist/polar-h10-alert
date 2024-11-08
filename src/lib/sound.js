@@ -8,7 +8,7 @@ import lowPath from '../assets/sound/Low.mp3';
 export function highBeep(volume) {
   const highBeepSound = new Howl({
     src: [highBeepPath],
-    volume: volume / 50
+    volume: volume / 100
   });
   highBeepSound.play();
 }
@@ -16,7 +16,7 @@ export function highBeep(volume) {
 export function lowBeep(volume) {
   const lowBeepSound = new Howl({
     src: [lowBeepPath],
-    volume: volume / 50
+    volume: volume / 100
   });
   lowBeepSound.play();
 }
