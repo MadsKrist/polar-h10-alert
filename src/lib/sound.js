@@ -40,7 +40,7 @@ export function normal(volume){
 export function low(volume){
   const lowSound = new Howl({
     src: [lowPath],
-    volume: 1
+    volume: volume / 100
   });
   lowSound.play();
 }
