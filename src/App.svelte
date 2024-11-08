@@ -77,24 +77,27 @@
 
     if(heartRate > 190 && highAlerted == false)
     {
-	highAlerted = true;
-	normalAlerted = false;
-        lowAlerted = false;
-	high(volume[0]);
+	    highAlerted = true;
+	    normalAlerted = false;
+      lowAlerted = false;
+	    high(volume[0]);
+      console.log("alerted high");
     }
-    else if(heartRate > 140 && normalAlterted == false)
+    else if(heartRate > 100 && normalAlterted == false)
     {
-   	normalAlerted = true;
-        highAlerted = false;
-	lowAlerted = false;
-	normal(volume[0]);
+   	  normalAlerted = true;
+      highAlerted = false;
+	    lowAlerted = false;
+	    normal(volume[0]);
+      console.log("alerted normal");
     }
     else if(lowAlerted == false)
     {
     	lowAlerted = true;
-	highAlerted = false;
-        normalAlerted = false;
-	low(volume[0]);
+	    highAlerted = false;
+      normalAlerted = false;
+	    low(volume[0]);
+      console.log("alerted low");
     }
     
 
