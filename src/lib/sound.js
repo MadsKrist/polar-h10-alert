@@ -1,9 +1,9 @@
 import { Howl, Howler } from 'howler';
 import highBeepPath from '../assets/sound/high_beep.mp3';
 import lowBeepPath from '../assets/sound/low_beep.mp3';
-import high from '../assets/sound/High.mp3';
-import normal from '../assets/sound/Normal.mp3';
-import low from '../assets/sound/Low.mp3';
+import highPath from '../assets/sound/High.mp3';
+import normalPath from '../assets/sound/Normal.mp3';
+import lowPath from '../assets/sound/Low.mp3';
 
 export function highBeep(volume) {
   const highBeepSound = new Howl({
@@ -23,7 +23,7 @@ export function lowBeep(volume) {
 
 export function high(volume){
   const highSound = new Howl({
-    src: [high],
+    src: [highPath],
     volume: volume / 100
   });
   highSound.play();
@@ -31,7 +31,7 @@ export function high(volume){
 
 export function normal(volume){
   const normalSound = new Howl({
-    src: [normal],
+    src: [normalPath],
     volume: volume / 100
   });
   normalSound.play();
@@ -39,7 +39,7 @@ export function normal(volume){
 
 export function low(volume){
   const lowSound = new Howl({
-    src: [low],
+    src: [lowPath],
     volume: volume / 100
   });
   lowSound.play();
